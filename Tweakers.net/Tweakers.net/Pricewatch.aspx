@@ -46,7 +46,16 @@
                     <!--/.nav-collapse -->
                 </div>
             </div>
-            <asp:GridView ID="ItemTable" runat="server"></asp:GridView>
+            <div class="container">
+                <div class="page-header">
+                    <h1>Categoriën</h1>
+                </div>
+                <asp:GridView AutoGenerateColumns="false" ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="True">
+                    <Columns>
+                        <asp:HyperLinkField DataTextField="Naam" DataNavigateUrlFields="ID" DataNavigateUrlFormatString="Categorie.aspx?c={0}" DataTextFormatString="{0}" HeaderText="Naam"/>
+                    </Columns>
+                </asp:GridView>
+            </div>
         </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

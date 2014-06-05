@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Categorie.aspx.cs" Inherits="Tweakers.Categorie1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Tweakers.Product1" %>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,7 @@
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
-    <link href="Categorie.css" rel="stylesheet" />
+    <link href="Product.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -48,11 +48,13 @@
             </div>
             <div class="container">
                 <div class="page-header">
-                    <asp:Label ID="TitleCat" runat="server" CssClass="h1" Text="Categorie_naam"></asp:Label>
+                    <h1>Product</h1>
                 </div>
-                <asp:GridView AutoGenerateColumns="False" ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="True">
+                <asp:GridView ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="True">
                     <Columns>
-                        <asp:HyperLinkField DataTextField="Naam" DataNavigateUrlFields="Naam" DataNavigateUrlFormatString="Product.aspx?p={0}" DataTextFormatString="{0}" HeaderText="Naam"/>
+                        <asp:BoundField DataField="Prijs" HeaderText="Naam" />
+                        <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
+                        <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
                         <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
                     </Columns>
                 </asp:GridView>

@@ -10,7 +10,7 @@
 namespace Tweakers {
     
     
-    public partial class Categorie1 {
+    public partial class Product1 {
         
         /// <summary>
         /// form1 control.
@@ -29,15 +29,6 @@ namespace Tweakers {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LoginOrOut;
-        
-        /// <summary>
-        /// TitleCat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TitleCat;
         
         /// <summary>
         /// ItemTable control.

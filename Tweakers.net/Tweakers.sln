@@ -5,16 +5,30 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweakers", "Tweakers.net\Tweakers.csproj", "{307A774D-41D0-4E61-915D-2A8A3EFE25EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{7E126970-D140-46A0-97C1-CCE4E42A71DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Debug|x86.ActiveCfg = Debug|x86
+		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Debug|x86.Build.0 = Debug|x86
 		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Release|x86.ActiveCfg = Release|x86
+		{307A774D-41D0-4E61-915D-2A8A3EFE25EA}.Release|x86.Build.0 = Release|x86
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E126970-D140-46A0-97C1-CCE4E42A71DA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
