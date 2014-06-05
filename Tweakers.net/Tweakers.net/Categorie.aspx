@@ -48,7 +48,7 @@
             </div>
             <div class="container">
                 <div class="page-header">
-                    <asp:Label ID="Title" runat="server" CssClass="h1" Text="Categorie_naam"></asp:Label>
+                    <asp:Label ID="TitleCat" runat="server" CssClass="h1" Text="Categorie_naam"></asp:Label>
                 </div>
             </div>
         </div>

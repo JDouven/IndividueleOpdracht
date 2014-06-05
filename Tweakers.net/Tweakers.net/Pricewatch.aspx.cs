@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code behind Pricewatch.aspx
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace Tweakers
                 LoginOrOut.Text = "Logout";
                 LoginOrOut.CssClass = "btn btn-lg btn-danger logout";
             }
-            
+
         }
 
         protected void LoginOrOut_Click(object sender, EventArgs e)

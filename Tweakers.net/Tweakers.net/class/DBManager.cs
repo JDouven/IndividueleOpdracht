@@ -1,11 +1,11 @@
-﻿using System;
+﻿//Database manager class for Tweakers
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
-
 
 namespace Tweakers
 {
@@ -18,7 +18,7 @@ namespace Tweakers
             conn = new OracleConnection();
         }
 
-        private bool connect()
+        private bool Connect()
         {
             try
             {
@@ -31,8 +31,11 @@ namespace Tweakers
             return true;
         }
 
-        public Categorie GetCategorie(int ID)
+        public Categorie GetCategorie(int id)
         {
+            int idcat;
+            string naam;
+            int childof;
             Categorie cat = null;
             try
             {
@@ -40,14 +43,14 @@ namespace Tweakers
                 conn.Open();
                 OracleCommand cmd = new OracleCommand(sql, conn);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add("CatID", OracleDbType.Int32, ID, ParameterDirection.Input);
+                cmd.Parameters.Add("CatID", OracleDbType.Int32, id, ParameterDirection.Input);
                 OracleDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    int id = reader.GetInt32(0);
-
+                    idcat = reader.GetInt32(0);
+                    naam = reader.GetOracleString(1).ToString();
+                    childof = reader.GetInt32(3);
                 }
-
             }
             catch { }
             finally

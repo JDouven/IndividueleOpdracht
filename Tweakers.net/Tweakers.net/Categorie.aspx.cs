@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code behind Categorie.aspx
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,7 +14,7 @@ namespace Tweakers
         private Categorie cat;
         protected void Page_Load(object sender, EventArgs e)
         {
-            cat = dbmngr.GetCategorie(Request.QueryString["c"]);
+            cat = dbmngr.GetCategorie(Convert.ToInt32(Request.QueryString["c"]));
         }
 
         protected void LoginOrOut_Click(object sender, EventArgs e)

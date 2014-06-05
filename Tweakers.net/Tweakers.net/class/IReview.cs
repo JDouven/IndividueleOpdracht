@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Interface for reviews
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tweakers
 {
-    interface IReview
+    public interface IReview
     {
     }
 }
