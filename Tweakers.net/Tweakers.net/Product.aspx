@@ -48,16 +48,24 @@
             </div>
             <div class="container">
                 <div class="page-header">
-                    <h1>Product</h1>
+                    <asp:Label ID="TitleProd" runat="server" CssClass="h1" Text="Product_naam"></asp:Label>
                 </div>
-                <asp:GridView ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="True">
-                    <Columns>
-                        <asp:BoundField DataField="Prijs" HeaderText="Naam" />
-                        <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
-                        <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
-                        <asp:BoundField DataField="Prijs" HeaderText="Prijs" />
-                    </Columns>
-                </asp:GridView>
+                <div class="info">
+                    <asp:GridView ID="ItemTable" runat="server" Width="100%" AllowSorting="False" RowStyle-CssClass="lead" GridLines="Horizontal">
+                    </asp:GridView>
+                </div>
+                <div class="prices">
+                    <asp:GridView ID="PricesTable" runat="server" Width="100%" AllowSorting="False" AutoGenerateColumns="false">
+                        <Columns>
+                            <asp:BoundField DataField="PrijsDouble" HeaderText="Prijs" />
+                            <asp:HyperLinkField DataTextField="Winkel" DataNavigateUrlFields="Winkel" DataNavigateUrlFormatString="Winkel.aspx?w={0}" DataTextFormatString="{0}" HeaderText="Winkel" />
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+            <div class="container reviews">
+                    <asp:GridView ID="ReviewTable" runat="server" Width="100%" AllowSorting="False">
+                    </asp:GridView>
             </div>
         </div>
     </form>

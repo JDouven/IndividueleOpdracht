@@ -31,13 +31,13 @@ namespace Tweakers {
         protected global::System.Web.UI.WebControls.Button LoginOrOut;
         
         /// <summary>
-        /// tb_rfid control.
+        /// tb_user control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_rfid;
+        protected global::System.Web.UI.WebControls.TextBox tb_user;
         
         /// <summary>
         /// tb_pw control.

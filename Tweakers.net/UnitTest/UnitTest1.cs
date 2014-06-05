@@ -12,9 +12,9 @@ namespace UnitTest
         public void TestMethod1()
         {
             DBManager db = new DBManager();
-            Categorie result = db.GetCategorie(0);
+            Categorie result = db.GetCategorie(1);
             Assert.IsNotNull(result);
-            Assert.AreEqual(0, result.CatID);
+            Assert.AreEqual(1, result.CatID);
         }
     }
 }

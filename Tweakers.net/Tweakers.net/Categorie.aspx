@@ -50,7 +50,7 @@
                 <div class="page-header">
                     <asp:Label ID="TitleCat" runat="server" CssClass="h1" Text="Categorie_naam"></asp:Label>
                 </div>
-                <asp:GridView AutoGenerateColumns="False" ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="True">
+                <asp:GridView AutoGenerateColumns="False" ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="False">
                     <Columns>
                         <asp:HyperLinkField DataTextField="Naam" DataNavigateUrlFields="Naam" DataNavigateUrlFormatString="Product.aspx?p={0}" DataTextFormatString="{0}" HeaderText="Naam"/>
                         <asp:BoundField DataField="Prijs" HeaderText="Prijs" />

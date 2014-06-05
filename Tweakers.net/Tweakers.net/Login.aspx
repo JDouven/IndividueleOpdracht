@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="form-signin">
                     <h2 class="form-signin-heading">Please sign in</h2>
-                    <asp:TextBox CssClass="form-control" ID="tb_rfid" runat="server" placeholder="RFID" type="text" required="required" />
+                    <asp:TextBox CssClass="form-control" ID="tb_user" runat="server" placeholder="RFID" type="text" required="required" />
                     <asp:TextBox CssClass="form-control" ID="tb_pw" runat="server" type="password" placeholder="Password" required="required" />
                     <label class="checkbox">
                         <asp:CheckBox ID="cb_remember" runat="server" />

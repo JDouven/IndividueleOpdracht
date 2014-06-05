@@ -9,5 +9,29 @@ namespace Tweakers
 {
     public interface IReview
     {
+        int ReviewID
+        {
+            get;
+        }
+
+        string Auteur
+        {
+            get;
+        }
+
+        string Onderwerp
+        {
+            get;
+        }
+
+        string Review_tekst
+        {
+            get;
+        }
+
+        int Beoordeling
+        {
+            get;
+        }
     }
 }

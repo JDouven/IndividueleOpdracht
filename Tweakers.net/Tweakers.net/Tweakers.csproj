@@ -68,7 +68,11 @@
     <Content Include="Pricewatch.css" />
     <Content Include="Product.aspx" />
     <Content Include="Product.css" />
+    <Content Include="User.aspx" />
+    <Content Include="User.css" />
     <Content Include="Web.config" />
+    <Content Include="Winkel.aspx" />
+    <Content Include="Winkel.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categorie.aspx.cs">
@@ -122,6 +126,20 @@
     <Compile Include="class\Winkel.cs" />
     <Compile Include="class\SSD.cs" />
     <Compile Include="class\Videokaart.cs" />
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Winkel.aspx.cs">
+      <DependentUpon>Winkel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Winkel.aspx.designer.cs">
+      <DependentUpon>Winkel.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

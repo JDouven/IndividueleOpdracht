@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Tweakers
 {
-    public abstract class Product
+    public class Product
     {
         public string Naam
         {

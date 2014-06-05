@@ -10,7 +10,7 @@
 namespace Tweakers {
     
     
-    public partial class Product1 {
+    public partial class Winkel1 {
         
         /// <summary>
         /// form1 control.
@@ -31,39 +31,30 @@ namespace Tweakers {
         protected global::System.Web.UI.WebControls.Button LoginOrOut;
         
         /// <summary>
-        /// TitleProd control.
+        /// TitleWinkel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TitleProd;
+        protected global::System.Web.UI.WebControls.Label TitleWinkel;
         
         /// <summary>
-        /// ItemTable control.
+        /// LabelLocatie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ItemTable;
+        protected global::System.Web.UI.WebControls.Label LabelLocatie;
         
         /// <summary>
-        /// PricesTable control.
+        /// LabelAwards control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView PricesTable;
-        
-        /// <summary>
-        /// ReviewTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ReviewTable;
+        protected global::System.Web.UI.WebControls.Label LabelAwards;
     }
 }

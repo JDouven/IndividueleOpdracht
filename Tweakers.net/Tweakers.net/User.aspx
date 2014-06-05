@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Pricewatch.aspx.cs" Inherits="Tweakers.Pricewatch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="Tweakers.User" %>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,7 @@
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
-    <link href="Pricewatch.css" rel="stylesheet" />
+    <link href="Default.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="Pricewatch.aspx">Pricewatch</a></li>
+                            <li><a href="Pricewatch.aspx">Pricewatch</a></li>
                             <li><a href="User.aspx">User</a></li>
                         </ul>
                         <asp:Button CssClass="btn btn-lg btn-success logout" ID="LoginOrOut" runat="server" Text="Login" OnClick="LoginOrOut_Click" />
@@ -48,13 +48,8 @@
             </div>
             <div class="container">
                 <div class="page-header">
-                    <h1>Categoriën</h1>
+                    <asp:Label ID="TitleUser" runat="server" CssClass="h1" Text="User_naam"></asp:Label>
                 </div>
-                <asp:GridView AutoGenerateColumns="false" ID="ItemTable" runat="server" Width="100%" GridLines="None" AllowSorting="False">
-                    <Columns>
-                        <asp:HyperLinkField DataTextField="Naam" DataNavigateUrlFields="ID" DataNavigateUrlFormatString="Categorie.aspx?c={0}" DataTextFormatString="{0}" HeaderText="Naam"/>
-                    </Columns>
-                </asp:GridView>
             </div>
         </div>
     </form>

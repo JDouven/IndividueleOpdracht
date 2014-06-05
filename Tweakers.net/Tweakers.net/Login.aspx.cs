@@ -13,6 +13,7 @@ namespace Tweakers
 {
     public partial class Login : System.Web.UI.Page
     {
+        DBManager dbmngr = new DBManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.IsAuthenticated)
@@ -28,9 +29,10 @@ namespace Tweakers
         {
             if (!Request.IsAuthenticated)
             {
-                if (this.tb_rfid.Text == "user" && this.tb_pw.Text == "password")
+                if (dbmngr.CheckLogin(tb_user.Text, tb_pw.Text))
                 {
-                    FormsAuthentication.RedirectFromLoginPage(this.tb_rfid.Text, this.cb_remember.Checked);
+                    Session.Add("UserName", tb_user.Text);
+                    FormsAuthentication.RedirectFromLoginPage(this.tb_user.Text, this.cb_remember.Checked);
                 }
                 else
                 {
