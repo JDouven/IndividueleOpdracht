@@ -1,0 +1,23 @@
+﻿body {
+    padding-bottom: 40px;
+    padding-top: 51px;
+    color: #5a5a5a;
+}
+
+.logout {
+    float: right;
+    padding: 5px 8px;
+    margin-top: 7px;
+}
+
+.navbar {
+    background-image: linear-gradient(to bottom,#008a8a 0,#055 100%);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #E8E8E8;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-image: linear-gradient(to bottom,#055 0,#008a8a 100%);
+}
