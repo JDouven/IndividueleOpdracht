@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="Tweakers.net.User" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Categorie.aspx.cs" Inherits="Tweakers.Categorie1" %>
 
 <!DOCTYPE html>
 
@@ -19,7 +19,7 @@
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
     <!-- Custom styles for this page -->
-    <link href="Default.css" rel="stylesheet" />
+    <link href="Categorie.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -39,11 +39,16 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="Pricewatch.aspx">Pricewatch</a></li>
-                            <li class="active"><a href="User.aspx">User</a></li>
+                            <li><a href="User.aspx">User</a></li>
                         </ul>
                         <asp:Button CssClass="btn btn-lg btn-success logout" ID="LoginOrOut" runat="server" Text="Login" OnClick="LoginOrOut_Click" />
                     </div>
                     <!--/.nav-collapse -->
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header">
+                    <asp:Label ID="Title" runat="server" CssClass="h1" Text="Categorie_naam"></asp:Label>
                 </div>
             </div>
         </div>

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tweakers.net {
+namespace Tweakers {
     
     
-    public partial class User {
+    public partial class Categorie1 {
         
         /// <summary>
         /// form1 control.
@@ -29,5 +29,14 @@ namespace Tweakers.net {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LoginOrOut;
+        
+        /// <summary>
+        /// Title control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Title;
     }
 }

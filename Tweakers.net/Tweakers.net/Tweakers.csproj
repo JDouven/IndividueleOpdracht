@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Tweakers.net</RootNamespace>
-    <AssemblyName>Tweakers.net</AssemblyName>
+    <RootNamespace>Tweakers</RootNamespace>
+    <AssemblyName>Tweakers</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -58,17 +58,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Categorie.aspx" />
+    <Content Include="Categorie.css" />
     <Content Include="Default.aspx" />
     <Content Include="Default.css" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Pricewatch.aspx" />
     <Content Include="Pricewatch.css" />
-    <Content Include="User.aspx" />
-    <Content Include="User.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorie.aspx.cs">
+      <DependentUpon>Categorie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categorie.aspx.designer.cs">
+      <DependentUpon>Categorie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="class\Categorie.cs" />
     <Compile Include="class\DBManager.cs" />
     <Compile Include="class\Laptop.cs" />
@@ -104,13 +111,6 @@
     <Compile Include="class\Winkel.cs" />
     <Compile Include="class\SSD.cs" />
     <Compile Include="class\Videokaart.cs" />
-    <Compile Include="User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Tweakers.net
+namespace Tweakers
 {
     public class Gebruiker
     {

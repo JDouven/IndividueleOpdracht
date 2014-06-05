@@ -5,22 +5,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Tweakers.net
+namespace Tweakers
 {
-    public partial class User : System.Web.UI.Page
+    public partial class Categorie1 : System.Web.UI.Page
     {
+        private DBManager dbmngr = new DBManager();
+        private Categorie cat;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.IsAuthenticated)
-            {
-                LoginOrOut.Text = "Logout";
-                LoginOrOut.CssClass = "btn btn-lg btn-danger logout";
-            }
+            cat = dbmngr.GetCategorie(Request.QueryString["c"]);
         }
 
         protected void LoginOrOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+
         }
     }
 }

@@ -7,10 +7,10 @@ using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
 
 
-namespace Tweakers.net
+namespace Tweakers
 {
-	public class DBManager
-	{
+    public class DBManager
+    {
         private OracleConnection conn;
 
         public DBManager()
@@ -23,7 +23,6 @@ namespace Tweakers.net
             try
             {
                 conn.ConnectionString = "User Id= tweakers; Password= password; Data Source= localhost:1521;";
-                conn.Open();
             }
             catch
             {
@@ -32,12 +31,31 @@ namespace Tweakers.net
             return true;
         }
 
-        public DataTable GetProducts()
+        public Categorie GetCategorie(int ID)
         {
-            DataTable dt = new DataTable();
+            Categorie cat = null;
+            try
+            {
+                string sql = "SELECT * FROM Categorie WHERE ID= :CatID;";
+                conn.Open();
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("CatID", OracleDbType.Int32, ID, ParameterDirection.Input);
+                OracleDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
 
+                }
 
-            return dt;
+            }
+            catch { }
+            finally
+            {
+                conn.Close();
+            }
+
+            return cat;
         }
-	}
+    }
 }
