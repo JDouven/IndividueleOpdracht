@@ -275,6 +275,79 @@ namespace Tweakers
             return p;
         }
 
+        public int GetNextReviewID()
+        {
+            int result = -1;
+            try
+            {
+                string sql = @"SELECT MAX(review_id) FROM review";
+                conn.Open();
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                result = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+
+            }
+            catch { }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
+
+        public bool AddProductReview(string auteur, string onderwerp, string tekst, int beoordeling, string productNaam)
+        {
+            bool success = false;
+            int ID = GetNextReviewID();
+            try
+            {
+                if (beoordeling > 5)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                string sql = @"INSERT INTO Review VALUES (:ID, :auteur, :onderwerp, :tekst, :beoordeling, 'P')";
+                conn.Open();
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("ID", OracleDbType.Int32, ID, ParameterDirection.Input);
+                cmd.Parameters.Add("auteur", OracleDbType.Varchar2, auteur, ParameterDirection.Input);
+                cmd.Parameters.Add("onderwerp", OracleDbType.Varchar2, onderwerp, ParameterDirection.Input);
+                cmd.Parameters.Add("tekst", OracleDbType.Varchar2, tekst, ParameterDirection.Input);
+                cmd.Parameters.Add("beoordeling", OracleDbType.Int32, beoordeling, ParameterDirection.Input);
+                cmd.ExecuteNonQuery();
+                success = true;
+            }
+            catch
+            {
+                success = false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            try
+            {
+                string sql = @"INSERT INTO Product_Review VALUES (:ID, :productNaam)";
+                conn.Open();
+                OracleCommand cmd = new OracleCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add("ID", OracleDbType.Int32, ID, ParameterDirection.Input);
+                cmd.Parameters.Add("productNaam", OracleDbType.Varchar2, productNaam, ParameterDirection.Input);
+                cmd.ExecuteNonQuery();
+                success = true;
+            }
+            catch
+            {
+                success = false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return success;
+        }
+
         public DataTable GetProductInfo(string naam)
         {
             string type = null;

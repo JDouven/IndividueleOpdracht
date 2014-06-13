@@ -27,4 +27,17 @@
         <asp:GridView ID="ReviewTable" runat="server" Width="100%" AllowSorting="False">
         </asp:GridView>
     </div>
+    <div class="container">
+        <div>
+        <asp:TextBox ID="tb_onderwerp" runat="server" type="text" required="required" />
+        <asp:TextBox ID="tb_tekst" runat="server" type="text" required="required" Style="width: 600px;" />
+        <asp:TextBox ID="tb_beoordeling" runat="server" type="number" required="required" Text="0" />
+            </div>
+        <div>
+            <asp:Panel CssClass="form-control alert alert-danger" ID="InvalidEntry" runat="server" Visible="false">
+                <asp:Label ID="InvalidEntryText" runat="server" Text="Error" />
+            </asp:Panel>
+            <asp:Button CssClass="btn btn-lg btn-primary btn-block" ID="Submit" Text="Place review" runat="server" OnClick="Submit_Click" />
+        </div>
+    </div>
 </asp:Content>

@@ -12,15 +12,20 @@ namespace Tweakers
     {
         private DBManager dbmngr = new DBManager();
         private Product product;
+        private string PNaam;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string PNaam = "";
+            PNaam = "";
             try
             {
                 PNaam = Convert.ToString(Request.QueryString["p"]);
             }
             catch { Response.Redirect("Default.aspx"); }
-            PNaam.Replace("%20", " ");
+            UpdateGridViews();
+        }
+
+        private void UpdateGridViews()
+        {
             DataTable dt = dbmngr.GetProductInfo(PNaam);
             DataTable dt2 = new DataTable();
             for (int i = 0; i <= dt.Rows.Count; i++)
@@ -51,6 +56,33 @@ namespace Tweakers
 
             ReviewTable.DataSource = product.Reviews;
             ReviewTable.DataBind();
+        }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+            InvalidEntry.Visible = false;
+            if (Request.IsAuthenticated)
+            {
+                try
+                {
+                    if (Convert.ToInt32(tb_beoordeling.Text) > 5 || Convert.ToInt32(tb_beoordeling.Text) < 0)
+                    {
+                        InvalidEntry.Visible = true;
+                        InvalidEntryText.Text = "Beoordeling must be between 0 and 5 (inclusive)";
+                    }
+                    else
+                    {
+                        dbmngr.AddProductReview((string)Session["UserName"], tb_onderwerp.Text, tb_tekst.Text, Convert.ToInt32(tb_beoordeling.Text), PNaam);
+                    }
+                }
+                catch
+                { }
+                UpdateGridViews();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx?ReturnUrl=" + Request.Url);
+            }
         }
     }
 }
