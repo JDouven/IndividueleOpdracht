@@ -14,11 +14,6 @@ namespace Tweakers
         private Product product;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.IsAuthenticated)
-            {
-                LoginOrOut.Text = "Logout";
-                LoginOrOut.CssClass = "btn btn-lg btn-danger logout";
-            }
             string PNaam = "";
             try
             {
@@ -56,11 +51,6 @@ namespace Tweakers
 
             ReviewTable.DataSource = product.Reviews;
             ReviewTable.DataBind();
-        }
-
-        protected void LoginOrOut_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Login.aspx");
         }
     }
 }

@@ -18,8 +18,6 @@ namespace Tweakers
         {
             if (Request.IsAuthenticated)
             {
-                LoginOrOut.Text = "Logout";
-                LoginOrOut.CssClass = "btn btn-lg btn-danger logout";
                 FormsAuthentication.SignOut();
                 Response.Redirect(FormsAuthentication.DefaultUrl);
             }
@@ -39,11 +37,6 @@ namespace Tweakers
                     this.InvalidLogin.Visible = true;
                 }
             }
-        }
-
-        protected void LoginOrOut_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Login.aspx");
         }
     }
 }
